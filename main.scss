@@ -1,0 +1,38 @@
+.grid{
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   row-gap: 30px;
+   column-gap: 30px;
+   grid-template-areas: "header header header"
+               "sidebar body body"
+               "sidebar footer footer"
+               "full full full";
+}
+
+.box{
+   padding: 3rem;
+   border: 1px solid #333;
+   background: lavender ;
+
+   &.header{
+      grid-area: header;
+      background: red;
+   }
+
+   &:nth-child(3){
+      grid-area: sidebar;
+   }
+
+   &:nth-child(4){
+      grid-area: body;
+   }
+
+   &:nth-child(5){
+      grid-area: footer;
+   }
+   &:nth-child(6){
+      grid-area: full;
+   }
+}
